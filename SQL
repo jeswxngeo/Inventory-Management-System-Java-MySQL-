@@ -1,0 +1,19 @@
+-- Connect to your sales_inventory database
+-- USE sales_inventory;
+
+-- Create products table (if not already created, ensure id is AUTO_INCREMENT)
+CREATE TABLE IF NOT EXISTS products (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    quantity INT NOT NULL,
+    price DOUBLE NOT NULL
+);
+
+-- Create sales table
+CREATE TABLE IF NOT EXISTS sales (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    product_id INT NOT NULL,
+    quantity_sold INT NOT NULL,
+    sale_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (product_id) REFERENCES products(id)
+);
