@@ -19,7 +19,7 @@ A simple Java-based console application for small businesses to manage product i
 
 ## 🗂 Project Structure
 
-Sales_Inventory_Tracker/
+Sales_Inventory_Tracker/n
 ├── dao/ # Database access logic (ProductDAO, SaleDAO)
 ├── model/ # Data models (Product, Sale)
 ├── utils/ # DBConnection utility
